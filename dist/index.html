@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+  <script defer src="runtime.bundle.js"></script><script defer src="index.bundle.js"></script></head>
+  <body>
+    <main class="container">
+      <section class="container-wrapper">
+        <h1 class="header-text">Today's To Do<span class="fa fa-refresh fa_custom"></span></h1>
+        
+        <form method="post" action="index.html">
+          <div class="input-wrapper">
+            <input type="text" name="todo-item-input" id="todo-item-input" class="todo-item-input" placeholder="Add to your list..."/>
+            <span class="fa fa-level-down fa_custom"></span>
+          </div>
+        </form>
+        <ul id="to-do-list"></ul>
+        <div class="closure-text">Clear all completed</div>
+      </section>    
+    </main>  
+  </body>
+</html>

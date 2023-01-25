@@ -1,0 +1,118 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+ul,
+li {
+  list-style-type: none;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.container-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 70%;
+  border: 1px solid #ddd;
+  box-shadow: 6px 6px 6px #ddd, -6px -6px 6px #ddd;
+  margin-top: 3.5rem;
+}
+
+.container-wrapper form input[type="text"] {
+  border: none;
+  width: 100%;
+  display: block;
+  font-size: 18px;
+  font-style: italic;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.container-wrapper input[type="checkbox"] {
+  cursor: pointer;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  outline: 0;
+  content: 0;
+  margin-top: -3px;
+}
+
+.container-wrapper input[type="text"]:disabled {
+  border: none;
+  background-color: #fff;
+}
+
+.container-wrapper input[type=checkbox]::before {
+  font-family: sans-serif;
+  font-size: 14px;
+  color: transparent !important;
+  content: "\f10c";
+  background-color: #fff;
+  display: block;
+  width: 15px;
+  height: 15px;
+  border: 2px solid rgb(154, 149, 149);
+  margin-right: 6px;
+}
+
+.container-wrapper input[type=checkbox]:checked::before {
+  color: #ddd !important;
+}
+
+.container-wrapper ul li {
+  border-bottom: 1px solid #ddd;
+}
+
+.header-text {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 300;
+  padding: 1rem 2rem;
+  color: rgb(108, 103, 108);
+  border-bottom: 1px solid #ddd;
+}
+
+.input-wrapper {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.todo-item {
+  display: flex;
+  padding: 1rem 2rem;
+}
+
+.fa_custom {
+  color: #989790;
+}
+
+.fa-level-down {
+  padding-right: 2rem;
+  padding-top: 1rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.item-description {
+  width: 100%;
+  font-size: 16px;
+  padding-left: 8px;
+  color: rgb(108, 103, 108);
+}
+
+.closure-text {
+  background-color: #fafafa;
+  text-align: center;
+  font-weight: 100;
+  padding: 1.2rem;
+  color: rgb(135, 129, 135);
+  font-size: 18px;
+}
