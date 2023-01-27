@@ -1,32 +1,31 @@
 import './style.css';
+import ToDoList from './toDoList.js';
 
-const list = [
-  {
-    description: 'wash the dishes',
-    completed: false,
-    index: 1,
-  },
-  {
-    description: 'complete To Do list project',
-    completed: false,
-    index: 2,
-  },
-  {
-    description: 'fix car',
-    completed: false,
-    index: 3,
-  },
-];
+const inputForm = document.getElementById('input-form');
+const inputValue = inputForm.elements['todo-item-input'];
+const enterValue = document.querySelector('.fa-level-down');
+const toDoList = new ToDoList();
 
-const showList = () => {
-  const toDoList = document.getElementById('to-do-list');
-  list.forEach((item) => {
-    toDoList.innerHTML += `<li class='todo-item'>
-      <input type='checkbox' class="checkbox" id=${item.index}/>
-      <input type='text' class='item-description' value='${item.description}' disabled/>
-      <span class='fa fa-lg fa-ellipsis-v fa_custom'></span>
-    </li>`;
-  });
+const addInputValue = ({ toDoList }) => {
+  if (inputValue.value !== '') {
+    toDoList.saveTaskInList(inputValue.value);
+    toDoList.showList();
+    inputForm.reset();
+  }
 };
 
-showList();
+enterValue.addEventListener('click', () => {
+  addInputValue({ toDoList });
+});
+
+inputValue.addEventListener('keypress', (event) => {
+  if (event.key === 'Enter' && event.target.value !== '') {
+    event.preventDefault();
+    addInputValue({ toDoList });
+  }
+});
+
+window.addEventListener('load', () => {
+  toDoList.showList();
+  inputValue.focus();
+});

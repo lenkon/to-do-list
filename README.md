@@ -2,7 +2,7 @@
 
 <div align="center">
 
-  <h3><b>To Do list: list structure</b></h3>
+  <h3><b>To Do list: add and remove</b></h3>
 
 </div>
 
@@ -26,11 +26,11 @@
 - [❓ FAQ](#faq)
 - [📝 License](#license)
 
-# 📖 [To Do list: list structure] <a name="about-project"></a>
+# 📖 [To Do list: add and remove] <a name="about-project"></a>
 
-> In this project, a simple HTML list of To Do tasks will be built. This simple web page will be built using webpack and served by a webpack dev server.
+> In this project, implement the CRUD (create, read, update, delete) methods will be implemented. All the elements of the user interface will be fully functional and the application will be completed.
 
-**[To Do list: list structure]** is...
+**[To Do list: add and remove]** is...
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -41,6 +41,7 @@
 <details>
   <summary>Client</summary>
   <ul>
+    <li><a href="https://github.com/lenkon/to-do-list/blob/main/.github/workflows/linters.yml">linter</a></li>
     <li><a href="https://www.w3schools.com/html/">html</a></li>
     <li><a href="https://www.w3schools.com/w3css/defaulT.asp">css</a></li>
     <li><a href="https://www.w3schools.com/js/default.asp">javascript</a></li>
@@ -54,6 +55,9 @@
 - **[Use webpack]**
 - **[To do list]**
 - **[Use webpack dev server]**
+- **[Adding a new task]**
+- **[Deleting a task]**
+- **[Editing task]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
