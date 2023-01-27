@@ -9,12 +9,12 @@
   <body>
     <main class="container">
       <section class="container-wrapper">
-        <h1 class="header-text">Today's To Do<span class="fa fa-refresh fa_custom"></span></h1>
+        <h1 class="header-text">Today's To Do<span class="fa fa-refresh fa-custom"></span></h1>
         
-        <form method="post" action="index.html">
+        <form id="input-form" method="post" action="index.html">
           <div class="input-wrapper">
-            <input type="text" name="todo-item-input" id="todo-item-input" class="todo-item-input" placeholder="Add to your list..."/>
-            <span class="fa fa-level-down fa_custom"></span>
+            <input type="text" name="todo-item-input" id="todo-item-input" class="todo-item-input" placeholder="Add to your list..." required/>
+            <span class="fa fa-level-down fa-custom"></span>
           </div>
         </form>
         <ul id="to-do-list"></ul>

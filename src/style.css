@@ -28,6 +28,7 @@ li {
 
 .container-wrapper form input[type="text"] {
   border: none;
+  outline: 0;
   width: 100%;
   display: block;
   font-size: 18px;
@@ -51,10 +52,10 @@ li {
 }
 
 .container-wrapper input[type=checkbox]::before {
-  font-family: sans-serif;
+  font-family: 'FontAwesome', sans-serif;
   font-size: 14px;
   color: transparent !important;
-  content: "\f10c";
+  content: "\f00c";
   background-color: #fff;
   display: block;
   width: 15px;
@@ -64,7 +65,7 @@ li {
 }
 
 .container-wrapper input[type=checkbox]:checked::before {
-  color: #ddd !important;
+  color: #fff !important;
 }
 
 .container-wrapper ul li {
@@ -89,23 +90,65 @@ li {
 .todo-item {
   display: flex;
   padding: 1rem 2rem;
+  font-size: 20px;
 }
 
-.fa_custom {
-  color: #989790;
+.strike-line {
+  text-decoration: line-through;
 }
 
 .fa-level-down {
   padding-right: 2rem;
   padding-top: 1rem;
-  border-bottom: 1px solid #ddd;
+  font-size: 20px;
+}
+
+.d-none {
+  display: none;
+}
+
+.trash-btn {
+  margin-left: 0.5rem;
+}
+
+.fa:hover {
+  color: rgb(57, 52, 52);
+}
+
+.fa.fa-arrows-rotate,
+.fa.fa-level-down {
+  transform: rotate(90deg);
+}
+
+.fa.fa-level-down {
+  position: absolute;
+  padding-bottom: 20px;
+  right: 20px;
+  top: 15px;
+}
+
+.fa-custom,
+.fa-ellipsis-v {
+  color: #989790;
+}
+
+.highlight {
+  color: #000;
+  background-color: rgb(236, 249, 242);
+}
+
+.high-light .fa {
+  color: #000;
 }
 
 .item-description {
+  border: none;
   width: 100%;
   font-size: 16px;
+  outline: 0;
   padding-left: 8px;
   color: rgb(108, 103, 108);
+  background-color: rgb(236, 249, 242);
 }
 
 .closure-text {
