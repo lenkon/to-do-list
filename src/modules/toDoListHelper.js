@@ -11,7 +11,7 @@ class ToDoListHelper {
   };
 
   static deleteButtonEventHandler = (toDoList) => {
-    const deleteButtons = document.querySelectorAll('.delete');
+    const deleteButtons = document.querySelectorAll('.delete-button');
     deleteButtons.forEach((item) => {
       item.addEventListener('click', (event) => {
         toDoList.deleteTaskFromList(false, parseInt(event.target.getAttribute('data-index'), 10));
@@ -22,15 +22,15 @@ class ToDoListHelper {
   static editElipsisEventHandler = (toDoList) => {
     const descriptions = document.querySelectorAll('.item-description');
 
-    descriptions.forEach((item) => item.addEventListener('keypress', (event) => {
+    descriptions.forEach((e) => e.addEventListener('keypress', (event) => {
       if (event.key === 'Enter') {
         event.preventDefault();
-        this.editDescriptionHandler(event, toDoList);
+        ToDoListHelper.editDescriptionHandler(event, toDoList);
       }
     }));
 
-    descriptions.forEach((item) => item.addEventListener('change', (event) => {
-      this.editDescriptionHandler(event, toDoList);
+    descriptions.forEach((e) => e.addEventListener('change', (event) => {
+      ToDoListHelper.editDescriptionHandler(event, toDoList);
     }));
   };
 
@@ -43,10 +43,10 @@ class ToDoListHelper {
   }
 
   static editTextEventHandler = () => {
-    const description = document.querySelectorAll('.modify');
+    const modifyDescription = document.querySelectorAll('.modify');
     const descriptions = document.querySelectorAll('.item-description');
 
-    description.forEach((item) => {
+    modifyDescription.forEach((item) => {
       item.addEventListener('click', (event) => {
         descriptions.forEach((e) => {
           e.disabled = true;
@@ -54,7 +54,6 @@ class ToDoListHelper {
           e.parentNode.querySelector('.modify').classList.remove('d-none');
           e.parentNode.querySelector('.fa-trash').classList.add('d-none');
         });
-
         event.target.parentNode.classList.add('highlight');
         const itemDescription = event.target.parentNode.querySelector('.item-description');
         const deleteButton = event.target.parentNode.querySelector('.fa-trash');
