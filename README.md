@@ -2,7 +2,7 @@
 
 <div align="center">
 
-  <h3><b>To Do list: add and remove</b></h3>
+  <h3><b>To Do list: interactive list</b></h3>
 
 </div>
 
@@ -26,11 +26,11 @@
 - [❓ FAQ](#faq)
 - [📝 License](#license)
 
-# 📖 [To Do list: add and remove] <a name="about-project"></a>
+# 📖 [To Do list: interactive list] <a name="about-project"></a>
 
-> In this project, implement the CRUD (create, read, update, delete) methods will be implemented. All the elements of the user interface will be fully functional and the application will be completed.
+> In this project, some functionality to the application will be added to make it interactive. The user will also be able to mark task completion by selecting the corresponding checkbox (or undo it by unchecking the checkbox). The updated tasks list will be stored in local storage.
 
-**[To Do list: add and remove]** is...
+**[To Do list: interactive list]** is...
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -58,6 +58,8 @@
 - **[Adding a new task]**
 - **[Deleting a task]**
 - **[Editing task]**
+- **[Task completion status]**
+- **[Clear all completed]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

@@ -65,7 +65,7 @@ li {
 }
 
 .container-wrapper input[type=checkbox]:checked::before {
-  color: #fff !important;
+  color: rgb(108, 103, 108) !important;
 }
 
 .container-wrapper ul li {

@@ -1,10 +1,11 @@
 import './style.css';
-import ToDoList from './toDoList.js';
+import ToDoList from './modules/toDoList.js';
 
 const inputForm = document.getElementById('input-form');
 const inputValue = inputForm.elements['todo-item-input'];
 const enterValue = document.querySelector('.fa-level-down');
 const toDoList = new ToDoList();
+const clearCompleted = document.querySelector('.closure-text');
 
 const addInputValue = ({ toDoList }) => {
   if (inputValue.value !== '') {
@@ -28,4 +29,8 @@ inputValue.addEventListener('keypress', (event) => {
 window.addEventListener('load', () => {
   toDoList.showList();
   inputValue.focus();
+});
+
+clearCompleted.addEventListener('click', () => {
+  toDoList.deleteTaskFromList(true);
 });
