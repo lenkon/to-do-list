@@ -65,7 +65,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Source Link](https://github.com/lenkon/to-do-list)
+- [Demo Link](https://lenkon.github.io/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
