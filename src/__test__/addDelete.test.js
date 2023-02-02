@@ -9,4 +9,28 @@ describe('To-do list add list test', () => {
     const lists = document.querySelectorAll('.to-do-list li');
     expect(lists).toHaveLength(1);
   });
+
+  test('add item 2', () => {
+    toDoList.saveTaskInList('Add item 2');
+    const lists = document.querySelectorAll('.to-do-list li');
+    expect(lists).toHaveLength(2);
+  });
+
+  test('add item 3', () => {
+    toDoList.saveTaskInList('Add item 3');
+    const lists = document.querySelectorAll('.to-do-list li');
+    expect(lists).toHaveLength(3);
+  });
+
+  test('add item 4', () => {
+    toDoList.saveTaskInList('Add item 4');
+    const lists = document.querySelectorAll('.to-do-list li');
+    expect(lists).toHaveLength(4);
+  });
+
+  test('add item 5', () => {
+    toDoList.saveTaskInList('Add item 5');
+    const lists = document.querySelectorAll('.to-do-list li');
+    expect(lists).toHaveLength(5);
+  });
 });
