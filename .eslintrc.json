@@ -14,12 +14,14 @@
     "no-shadow": "off",
     "no-param-reassign": "off",
     "eol-last": "off",
+    "no-use-before-define": "off",
     "import/extensions": [ 1, {
       "js": "always", "json": "always"
     }]
   },
   "ignorePatterns": [
     "dist/",
-    "build/"
+    "build/",
+    "luxon.min.js"
   ]
 }
