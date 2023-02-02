@@ -34,3 +34,23 @@ describe('To-do list add list test', () => {
     expect(lists).toHaveLength(5);
   });
 });
+
+describe('To-do list delete list test', () => {
+  test('delete item 2', () => {
+    toDoList.deleteTaskFromList(false, 2);
+    const lists = document.querySelectorAll('.to-do-list li');
+    expect(lists).toHaveLength(4);
+  });
+
+  test('delete item 1', () => {
+    toDoList.deleteTaskFromList(false, 1);
+    const lists = document.querySelectorAll('.to-do-list li');
+    expect(lists).toHaveLength(3);
+  });
+
+  test('delete remaining items', () => {
+    toDoList.deleteTaskFromList(false, 3);
+    const lists = document.querySelectorAll('.to-do-list li');
+    expect(lists).toHaveLength(2);
+  });
+});

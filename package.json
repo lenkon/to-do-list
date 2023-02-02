@@ -12,10 +12,9 @@
   },
   "jest": {
     "testEnvironment": "jsdom",
-    "resetMocks": false,
-    "setupFiles": [
-      "jest-localstorage-mock"
-    ]
+    "verbose": true,
+    "resetMocks": false
+    
   },
   "repository": {
     "type": "git",
