@@ -48,7 +48,13 @@ describe('To-do list delete list test', () => {
     expect(lists).toHaveLength(3);
   });
 
-  test('delete remaining items', () => {
+  test('delete item 3', () => {
+    toDoList.deleteTaskFromList(false, 3);
+    const lists = document.querySelectorAll('.to-do-list li');
+    expect(lists).toHaveLength(2);
+  });
+
+  test('delete out of bound index item', () => {
     toDoList.deleteTaskFromList(false, 3);
     const lists = document.querySelectorAll('.to-do-list li');
     expect(lists).toHaveLength(2);

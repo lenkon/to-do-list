@@ -8,11 +8,10 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
     "start": "webpack serve --open",
-    "test": "jest"
+    "test": "jest --coverage"
   },
   "jest": {
     "testEnvironment": "jsdom",
-    "verbose": true,
     "resetMocks": false
     
   },
