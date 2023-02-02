@@ -2,7 +2,7 @@
 
 <div align="center">
 
-  <h3><b>To Do list: interactive list</b></h3>
+  <h3><b>Testing To Do list: part 1</b></h3>
 
 </div>
 
@@ -26,11 +26,11 @@
 - [❓ FAQ](#faq)
 - [📝 License](#license)
 
-# 📖 [To Do list: interactive list] <a name="about-project"></a>
+# 📖 [Testing To Do list: part 1] <a name="about-project"></a>
 
-> In this project, some functionality to the application will be added to make it interactive. The user will also be able to mark task completion by selecting the corresponding checkbox (or undo it by unchecking the checkbox). The updated tasks list will be stored in local storage.
+> In this project unit tests for the To Do list application will be written. The testing project has been divided into two parts. In part 1 functions responsible for adding and deleting list items will be tested. In part 2 the status and content updates will be tested.
 
-**[To Do list: interactive list]** is...
+**[Testing To Do list: part 1]** is...
 
 ## 🛠 Built With <a name="built-with"></a>
 

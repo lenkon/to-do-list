@@ -70,6 +70,7 @@ li {
 
 .container-wrapper ul li {
   border-bottom: 1px solid #ddd;
+  cursor: move;
 }
 
 .header-text {

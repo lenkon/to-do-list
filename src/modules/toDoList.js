@@ -8,7 +8,7 @@ class ToDoList {
   getTasks = () => this.tasks;
 
   showList = () => {
-    const listContainer = document.getElementById('to-do-list');
+    const listContainer = document.querySelector('.to-do-list');
     listContainer.innerHTML = '';
     this.getTasks().forEach((todo) => {
       listContainer.innerHTML += `<li class='todo-item'>
@@ -35,6 +35,7 @@ class ToDoList {
   saveTaskInList = (description, completed = false) => {
     this.tasks.push({ description, completed, index: this.getTasks().length + 1 });
     this.saveToStorage();
+    this.showList();
   }
 
   deleteTaskFromList = (clear = false, itemIndex = -1) => {
