@@ -13,7 +13,6 @@
   "jest": {
     "testEnvironment": "jsdom",
     "resetMocks": false
-    
   },
   "repository": {
     "type": "git",

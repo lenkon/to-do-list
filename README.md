@@ -2,7 +2,7 @@
 
 <div align="center">
 
-  <h3><b>Testing To Do list: part 1</b></h3>
+  <h3><b>Testing To Do list: part 2</b></h3>
 
 </div>
 
@@ -26,17 +26,17 @@
 - [❓ FAQ](#faq)
 - [📝 License](#license)
 
-# 📖 [Testing To Do list: part 1] <a name="about-project"></a>
+# 📖 [Testing To Do list: part 2] <a name="about-project"></a>
 
-> In this project unit tests for the To Do list application will be written. The testing project has been divided into two parts. In part 1 functions responsible for adding and deleting list items will be tested. In part 2 the status and content updates will be tested.
+> In this project unit tests for the To Do list application will be written. The testing project has been divided into two parts. In this part of the testing project, you will test functions responsible for the status and content updates.
 
-**[Testing To Do list: part 1]** is...
+**[Testing To Do list: part 2]** is...
 
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
 
->  Built with html, css and javascript with linter configuration setup.
+>  Built with html, css and javascript with webpack, jest, and linter configuration setup.
 
 <details>
   <summary>Client</summary>
