@@ -22,3 +22,17 @@ describe('To-do list edit list test', () => {
     expect(desc).toBe('Edited item 2');
   });
 });
+
+describe('To-do list update completed status test', () => {
+  test('update completed tasks', () => {
+    toDoList.updateTaskStatus(0);
+    toDoList.showList();
+    let { checked } = document.querySelectorAll('.checkbox')[0];
+    expect(checked).toBe(true);
+
+    toDoList.updateTaskStatus(1);
+    toDoList.showList();
+    checked = document.querySelectorAll('.checkbox')[1].checked;
+    expect(checked).toBe(true);
+  });
+});
