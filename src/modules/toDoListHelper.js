@@ -22,14 +22,14 @@ class ToDoListHelper {
   static editElipsisEventHandler = (toDoList) => {
     const descriptions = document.querySelectorAll('.item-description');
 
-    descriptions.forEach((e) => e.addEventListener('keypress', (event) => {
+    descriptions.forEach((desc) => desc.addEventListener('keypress', (event) => {
       if (event.key === 'Enter') {
         event.preventDefault();
         ToDoListHelper.editDescriptionHandler(event, toDoList);
       }
     }));
 
-    descriptions.forEach((e) => e.addEventListener('change', (event) => {
+    descriptions.forEach((desc) => desc.addEventListener('change', (event) => {
       ToDoListHelper.editDescriptionHandler(event, toDoList);
     }));
   };
@@ -39,7 +39,24 @@ class ToDoListHelper {
     const data = event.target.value;
     toDoList.editDescription({ id, data });
     event.target.disabled = true;
-    event.target.parentNode.querySelector('.modify').classList.toggle('d-none');
+    event.target.parentNode.querySelector('.modify').classList.toggle('display-none');
+  }
+
+  static resetDescFields = (descField) => {
+    descField.disabled = true;
+    descField.parentNode.classList.remove('highlight');
+    descField.parentNode.querySelector('.modify').classList.remove('display-none');
+    descField.parentNode.querySelector('.fa-trash').classList.add('display-none');
+  }
+
+  static setActiveDescField = (event) => {
+    event.target.parentNode.classList.add('highlight');
+    const itemDescription = event.target.parentNode.querySelector('.item-description');
+    const deleteButton = event.target.parentNode.querySelector('.fa-trash');
+    itemDescription.disabled = false;
+    itemDescription.focus();
+    event.target.classList.toggle('display-none');
+    deleteButton.classList.toggle('display-none');
   }
 
   static editTextEventHandler = () => {
@@ -48,19 +65,8 @@ class ToDoListHelper {
 
     modifyDescription.forEach((item) => {
       item.addEventListener('click', (event) => {
-        descriptions.forEach((e) => {
-          e.disabled = true;
-          e.parentNode.classList.remove('highlight');
-          e.parentNode.querySelector('.modify').classList.remove('d-none');
-          e.parentNode.querySelector('.fa-trash').classList.add('d-none');
-        });
-        event.target.parentNode.classList.add('highlight');
-        const itemDescription = event.target.parentNode.querySelector('.item-description');
-        const deleteButton = event.target.parentNode.querySelector('.fa-trash');
-        itemDescription.disabled = false;
-        itemDescription.focus();
-        event.target.classList.toggle('d-none');
-        deleteButton.classList.toggle('d-none');
+        descriptions.forEach((descField) => ToDoListHelper.resetDescFields(descField));
+        ToDoListHelper.setActiveDescField(event);
       });
     });
   }
