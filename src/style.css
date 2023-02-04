@@ -11,13 +11,15 @@ li {
   list-style-type: none;
 }
 
-.container {
+.display-flex {
   display: flex;
+}
+
+.container {
   justify-content: center;
 }
 
 .container-wrapper {
-  display: flex;
   flex-direction: column;
   justify-content: center;
   width: 70%;
@@ -74,7 +76,6 @@ li {
 }
 
 .header-text {
-  display: flex;
   justify-content: space-between;
   font-weight: 300;
   padding: 1rem 2rem;
@@ -83,13 +84,11 @@ li {
 }
 
 .input-wrapper {
-  display: flex;
   justify-content: space-between;
   position: relative;
 }
 
 .todo-item {
-  display: flex;
   padding: 1rem 2rem;
   font-size: 20px;
 }
@@ -104,7 +103,7 @@ li {
   font-size: 20px;
 }
 
-.d-none {
+.display-none {
   display: none;
 }
 

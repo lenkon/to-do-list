@@ -11,12 +11,12 @@ class ToDoList {
     const listContainer = document.querySelector('.to-do-list');
     listContainer.innerHTML = '';
     this.getTasks().forEach((todo) => {
-      listContainer.innerHTML += `<li class='todo-item'>
+      listContainer.innerHTML += `<li class='todo-item display-flex'>
         <input type='checkbox' class="checkbox" id=${todo.index} ${todo.completed ? 'checked' : ''}/>
         <input type='text' class='item-description ${todo.completed ? 'strike-line' : ''}' data-pos='${todo.index}' 
         value='${todo.description}' disabled/>
         <span class='modify fa fa-ellipsis-v fa_custom'></span>
-        <span class='trash-btn d-none fa fa-trash delete-button' data-index=${todo.index}></span>
+        <span class='trash-btn display-none fa fa-trash delete-button' data-index=${todo.index}></span>
       </li>`;
     });
 
