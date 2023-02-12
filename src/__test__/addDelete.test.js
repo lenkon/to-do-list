@@ -8,12 +8,18 @@ describe('To-do list add list test', () => {
     toDoList.saveTaskInList('Add item 1');
     const lists = document.querySelectorAll('.to-do-list li');
     expect(lists).toHaveLength(1);
+
+    const desc = document.querySelectorAll('.item-description')[0].value;
+    expect(desc).toBe('Add item 1');
   });
 
   test('add item 2', () => {
     toDoList.saveTaskInList('Add item 2');
     const lists = document.querySelectorAll('.to-do-list li');
     expect(lists).toHaveLength(2);
+
+    const desc = document.querySelectorAll('.item-description')[1].value;
+    expect(desc).toBe('Add item 2');
   });
 
   test('add item 3', () => {
